@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.logo{
+    width: 110px;
+    height: 80px;
+    padding-left: 20px;
+}
+
+header {
+    display: flex;
+    background-color: #bfbebe;
+    padding-top: 0%;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.menu ul li {
+    padding:12px 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ebebeb;
+    margin: auto;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.menu ul li a {
+    color: #000;
+    /* background-color: red; */
+    padding: 12px;
+    border-radius: 5px;
+
+}
+
+.menu ul li:hover {
+    background-color: #115aec;
+    animation: spring 300ms ease-out;
+    background-image: none;
+}
+
+.menu ul li:hover a {
+    color: white;
+}
+
+.menu ul li:active {
+    transform: translateY(4px);
+}
+
+@keyframes spring {
+    15% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.2, 1.1);
+    }
+
+    40% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(0.95, 0.95);
+    }
+
+    75% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.05, 1);
+    }
+
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+header ul button {
+    width: 100PX;
+    height: 40PX;
+    background-color: #115aec;
+    border-radius: 5px;
+    box-shadow: 0 3PX 3PX rgb(97, 96, 96);
+    font-size: 15px;
+    color: #060000;
+    border: none;
+    margin-right: 10PX;
+    margin: 5px;
+}
+
+header ul button a {
+    color: white;
+    padding: 12px 35px;
+}
+header ul button:hover {
+    background-color: white;
+}
+header ul button:hover a {
+    color: #115aec;
+}
+
+.stagaire {
+    margin: 100px;
+
+}
+
+header div ul li a.mission {
+    /* background-image: url('https://scottyzen.sirv.com/Images/v/button.png'); */
+    background-size: 100% 100%;
+    background-color: #24262b;
+}
+
+header div ul li a.mission {
+    color: white;
+}
+
+.prn {
+    margin-top: 80px;
+
+}
+
+
+
+
+
+
+
+
+
+.act {
+    text-align: center;
+    color: rgb(75, 97, 161);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+
+i h1 {
+    text-align: center;
+    color: rgb(75, 97, 161);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+   
+
+section div {
+    display: flex;
+    justify-content: space-around;
+}
+
+section div img {
+    border-radius: 6px;
+    box-shadow: 0 0 8px #000;
+
+}
+
+em div p {
+    padding-top: 20PX;
+    font-size: large;
+}
+
+em div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.time {
+    display: flex;
+    padding-top: 20PX;
+    padding-bottom: 20PX;
+}
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70PX 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18 PX;
+    color: #4bca58;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    font-weight: 500;
+    position: relative;
+
+}
+
+
+.footer-col ul li :not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(133, 162, 192);
+    text-decoration: none;
+    font-weight: 300px;
+    color: rgb(164, 164, 164);
+    display: block;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: rgb(98, 201, 201);
+    padding-left: 10px;
+
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(91, 91, 91);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: rgb(160, 162, 162);
+    transition: all 0.5s ease;
+
+
+}
+
+.footer-col .social-links a:hover {
+    color: #ffffff;
+    background-color: rgb(7, 7, 7);
+}
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

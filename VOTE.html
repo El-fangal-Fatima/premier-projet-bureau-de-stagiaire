@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/VOTE.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<header>
+    <img src="assets/img/blog.png" alt="errore" class="logo">
+    
+    <div class="menu">
+        <ul>
+        <li class="accueil"><a href="index.html">accueil</a></li>
+        <li><a href="qsmn.html" class="qsn">Que sommes-nous</a></li>
+        <li><a href="BLOG.HTML" class="plog"> blog</a></li>
+        <li><a href="mission.html" > missions et politique</a></li>
+        <li class="vote"><a href="VOTE.html">espace vote</a></li>
+        <li><a href="">page d'admistraction</a></li>
+        <button><a href="login.html" id="LOG">login</a></button>
+        </ul>
+    </div>
+
+</header>
+    
+        
+     <h1>Le vote se terminera le lundi 01/12/2023 </h1>
+     <SEction>
+        <div class="wrap">
+        <div class="display">
+        <div class="counte">
+            <span class="days"></span>:
+            <span class="hours"></span>:
+            <span class="minutes"></span>:
+            <span class="seconds"></span>
+        </div>
+    </div>
+        <!-- <div><PRE> JOURS : HEURS : MINUTS : SECONDES</PRE></div> -->
+        </div>
+    </SEction>
+
+    
+        <NAv>
+        <H2> Choisissez votre réponse:</H2>
+        <DIV> <form>
+            
+            <label for=""><input type="radio" name="cc">  chiox A</label><br>
+            <br>
+            
+            <label for="" ><input type="radio" name="cc">chiox B</label><br>
+            <br>
+            
+            <label for="" ><input type="radio" name="cc"> chiox C</label><br>
+            <button id="env">envoyez</button>
+        </form> 
+    <img src="assets/img/download (2).jpg" alt=""></DIV>
+    </NAv>
+    <!-- <SEction>
+    <div class="wrap">
+    <div class="display">
+    <div class="counte">
+        <span class="days"></span>:
+        <span class="hours"></span>:
+        <span class="minutes"></span>:
+        <span class="seconds"></span>
+    </div>
+</div>
+     <div><PRE> JOURS : HEURS : MINUTS : SECONDES</PRE></div> 
+    </div>
+</SEction> -->
+    <script >
+        let countdowndate = new Date("dec 01 ,2023 23:59:59").getTime();
+
+let counter = setInterval(()=>{
+    
+    let datenow = new Date().getTime();
+    
+    
+    let dateDeff = countdowndate - datenow; 
+
+    let days = Math.floor(dateDeff / 1000 / 60 / 60 / 24);
+    let hours = Math.floor((dateDeff % (1000 * 60 * 60 * 24)) / 1000 / 60 / 60);
+    let minutes = Math.floor((dateDeff % (1000 * 60 * 60)) / 1000 / 60);
+    let seconds = Math.floor((dateDeff % (1000 * 60)) / 1000); 
+
+    
+    document.querySelector('.days').innerHTML = days < 10 ? `00${days}`: days;
+    document.querySelector('.hours').innerHTML = hours < 10 ? `0${hours}`: hours;
+    document.querySelector('.minutes').innerHTML = minutes < 10 ? `0${minutes}`: minutes;
+    document.querySelector('.seconds').innerHTML = seconds < 10 ? `0${seconds}`: seconds;
+    if (dateDeff < 0){
+        clearInterval(counter)
+    }
+},1000)
+ 
+</script>
+
+<footer class="footer">
+    <div class="container" >
+        <div class="row">
+            <div class="footer-col">
+                <h4> Support</h4>
+                <ul>
+                    <li> <a href=""> Aide </a></li>
+                    <li> <a href=""> contacter-nous</a></li>
+                    <li> <a href="">FAQ </a></li>
+                    <li> <a href="">à propre de nous </a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4> Activité</h4>
+                <ul>
+                    <li> <a href=""> actualités </a></li>
+                    <li> <a href=""> articles </a></li>
+                    <li> <a href=""> vidéo promotionnelle</a></li>
+                    <li> <a href=""> témoignages</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4> suivez-nous</h4>
+                <div class="social-links">
+                    <a href=""> <i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""> <i class="fab fa-linkedin-in"></i></a>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

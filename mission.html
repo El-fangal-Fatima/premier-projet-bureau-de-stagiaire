@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/SINGUP.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>login</title>
+</head>
+<body>
+    <header>
+        <img src="assets/img/blog.png" alt="errore" class="logo">
+        
+        <div class="menu">
+            <ul>
+              <li class="accueil"><a href="index.html">accueil</a></li>
+              <li><a href="qsmn.html" class="qsn">Que sommes-nous</a></li>
+              <li><a href="BLOG.HTML" class="plog"> blog</a></li>
+              <li><a href="mission.html"> missions et politique</a></li>
+              <li><a href="VOTE.html">espace vote</a></li>
+              <li><a href="">page d'admistraction</a></li>
+              <li><a href="login.html">login</a></li>
+            </ul>
+          </div>
+    </header>
+    <div class="center">
+        <h1> Créer un compte</h1>
+        <form method="post">
+            
+            <div class="txt_field">
+                <label for="Pre_nom"> Prénom et nom:</label>
+                <input type="text" id="Pre_nom"  >
+                <span></span>
+            </div>
+            <div class="txt_field">
+                <label for="mail"> Email:</label>
+                <input type="text" id="mail"  >
+                <span></span>
+            </div>
+            <div class="txt_field">
+                <label for="tel"> Téléphone:</label>
+                <input type="text" id="tel" >
+                <span></span>
+            </div>
+            <div class="txt_field">
+                <label for="fil"> Filiére:</label>
+                <input type="text" id="fil"  >
+                <span></span>
+            </div>
+            <div class="txt_field">
+                <label for="login"> Login:</label>
+                <input type="text" id="login"  >
+                <span></span>
+            </div>
+            <div class="txt_field">
+                <label for="pwd"> Mot de passe:</label>
+                <input type="password" id="pwd" >
+                <span></span>
+            </div>
+            <button type="submit">Créer</button>
+        </form>
+    </div>
+    <script>
+         
+        let Pre_nom = document.querySelector('#Pre_nom')
+        let mail = document.querySelector('#mail')
+        let tel = document.querySelector('#tel')
+        let fil = document.querySelector('#fil')
+        let login = document.querySelector('#login')
+        let password = document.querySelector('#pwd')
+        let form = document.forms[0]
+         
+        form.onsubmit=function(){
+           let validusername=/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})*$/.test(mail.value)
+           let validlogin=/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})*$/.test(login.value)
+           
+           if( Pre_nom.value.length==''){
+       
+                alert('Prenom invalide !')
+                return false
+            }
+           if(validusername === false || mail.value.length==''){
+       
+               alert('mail invalide !')
+              return false
+           }
+           if( tel.value.length<10 ){
+               
+               alert('tel invalide !')
+               return false
+           }
+           if( fil.value.length=='' ){
+               
+               alert('Filiére invalide !')
+               return false
+           }
+           if(validlogin === false || login.value.length==''){
+       
+                alert('login invalide !')
+                return false
+            }
+           
+           if( password.value.length<8){
+               
+               alert('mod de passe invalide !')
+               return false
+           }
+            
+           return true
+       }
+    </script>
+</body>
+</html>

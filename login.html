@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <img src="assets/img/blog.png" alt="errore" class="logo">
+        
+        <div class="menu">
+            <ul>
+                <li class="accueil"><a href="index.html">Accueil</a></li>
+                <li><a href="qsmn.html" class="qsn">Que sommes-nous</a></li>
+                <li><a href="BLOG.HTML" class="plog">Blog</a></li>
+                <li><a href="mission.html">Missions et politique</a></li>
+                <li><a href="VOTE.html">Espace vote</a></li>
+                <li><a href="#">Page d'administration</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="center">
+        <h1>LOGIN</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" id="login" name="login">
+                <span></span>
+                <label for="login">Login</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="pwd" name="password">
+                <span></span>
+                <label for="pwd">Mot de passe</label>
+            </div>
+            <div class="pass">Mot de passe oublié ?</div>
+            <input type="submit" value="Login">
+            <div class="singup_link">
+                Pas encore membre ? <a href="SINGUP.html">Sign up</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        let mail = document.querySelector('#login');
+        let password = document.querySelector('#pwd');
+        let form = document.querySelector('form');
+
+        form.onsubmit = function() {
+            let validUsername = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(mail.value);
+
+            if (!validUsername || mail.value.trim() === '') {
+                alert('Mail invalide !');
+                return false;
+            }
+
+            if (password.value.length < 8) {
+                alert('Mot de passe invalide !');
+                return false;
+            }
+
+            return true;
+        };
+    </script>
+</body>
+</html>

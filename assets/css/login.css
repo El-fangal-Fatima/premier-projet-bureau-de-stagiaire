@@ -1,0 +1,252 @@
+*{
+    margin: 0; 
+    padding: 0;
+text-decoration: none;
+list-style: none;
+
+}
+
+.logo{
+    width: 110px;
+    height: 80px;
+    padding-left: 20px;
+}
+header{
+    display: flex;
+    background-color:rgb(191, 190, 190) ;
+    padding-top: 0%;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu ul {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.menu ul li {
+    padding:12px 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ebebeb;
+    margin: auto;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.menu ul li a {
+    color: #000;
+    /* background-color: red; */
+    padding: 10px;
+}
+
+.menu ul li:hover {
+    background-color: #115aec;
+    animation: spring 300ms ease-out;
+    background-image: none;
+}
+
+.menu ul li:hover a {
+    color: white;
+}
+
+.menu ul li:active {
+    transform: translateY(4px);
+}
+
+@keyframes spring {
+    15% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.2, 1.1);
+    }
+
+    40% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(0.95, 0.95);
+    }
+
+    75% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.05, 1);
+    }
+
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+header ul button {
+    width: 100PX;
+    height: 40PX;
+    background-color: #115aec;
+    border-radius: 5px;
+    box-shadow: 0 3PX 3PX rgb(97, 96, 96);
+    font-size: 15px;
+    color: #060000;
+    border: none;
+    margin-right: 10PX;
+    margin: 5px;
+}
+
+header ul button a {
+    color: white;
+    padding: 12px 35px;
+}
+header ul button:hover {
+    background-color: white;
+}
+header ul button:hover a {
+    color: #115aec;
+}
+
+
+.stagaire{
+    margin: 100px;
+    
+}
+
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    max-width:1170px ;
+    margin: auto;
+    
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ul{
+    list-style:none ;
+    
+}
+body{
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.center{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform:translate(-50%, -50%) ;
+    width: 400px;
+    background-color:white;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0 ;
+    border-bottom: 1px solid silver;
+}
+.center form {
+    padding: 0 40px ;
+    box-sizing: border-box;
+}
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+    font-style:italic;
+}
+.txt_field input{
+    width: 100%;
+    padding: 0 5px ;
+    height: 40px;
+    font-size:16 px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color:#adadad ;
+    transform:translateY(-50%) ;
+    font-size: 16px ;
+    pointer-events: none;
+    transition: .5s;
+
+}
+/* .txt_field span ::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2691d9;
+} */
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -5px;
+    color:rgb(27, 27, 201) ;
+
+}
+.txt_field input:focus ~ span ::before,
+.txt_field input:valid ~ span::before {
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+
+}
+.pass :hover{
+    text-decoration: underline;
+}
+input[ type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #251dfb;
+    border-radius: 25px;
+    font-size: 18px;
+    color: rgb(187, 187, 187);
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+/* input[ type="submit"]:hover{
+    border-color: #d9ac26;
+    transition: 5s;
+} */
+.singup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #484040;
+}
+.singup_link a{
+    color:#0663fa ;
+    text-decoration: none;
+}
+.singup_link a :hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+.erorr_login,.erorr_pwd{
+    font-size: 14px;
+    color: red;
+}
